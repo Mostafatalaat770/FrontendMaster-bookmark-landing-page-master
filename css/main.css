@@ -67,7 +67,7 @@ nav {
 	color: var(--soft-red);
 }
 section {
-	padding-top: 4em;
+	margin-top: 2em;
 }
 #front {
 	padding-left: 4em;
@@ -77,27 +77,32 @@ section {
 	font-size: 2.5em;
 	color: var(--very-dark-blue);
 }
-.desc {
+#front .desc {
 	width: 40%;
 	margin-right: 3em;
+	place-self: center;
+	margin-bottom: 2em;
 }
 .illustration {
-	width: 54%;
+	position: relative;
+}
+.illustration::after {
+	content: " ";
+	width: 75%;
 	background: var(--soft-blue);
 	border-radius: 0 0 0 50%;
-	margin-left: 6em;
-	position: relative;
-	margin-bottom: -8em;
-	margin-top: 4em;
+	position: absolute;
+	right: 0;
+	height: 75%;
+	top: 25%;
+	z-index: -1;
 }
 .illustration img {
-	position: absolute;
-	left: -6em;
-	top: -6em;
-	max-width: 100%;
+	max-width: calc(100% - 2em);
 }
-.desc p {
+#front .desc p {
 	margin-bottom: 2em;
+	max-width: 90%;
 }
 .violet {
 	background: var(--soft-blue);
