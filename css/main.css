@@ -122,3 +122,79 @@ section {
 	border-color: var(--grayish-blue);
 	color: var(--grayish-blue);
 }
+#features {
+	padding-right: 4em;
+}
+#features .desc {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+#features .desc p {
+	max-width: 40%;
+	place-self: center;
+}
+h2 {
+	color: var(--very-dark-blue);
+}
+#features #items-names {
+	display: flex;
+	place-content: center;
+	margin-bottom: 4em;
+}
+.item-name {
+	padding: 1em 2em;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+	transition: color, border 0.2s linear;
+	box-shadow: 0px 1px 0px 0px #e0e0ea;
+}
+.item-name:hover {
+	color: var(--soft-red);
+}
+#items-names .active {
+	border-color: var(--soft-red);
+}
+.tabs .item {
+	display: none;
+}
+.tabs .active {
+	display: flex;
+}
+.item .illustration {
+	width: 50%;
+	animation: fade both 1s;
+	animation-delay: 0.2s;
+}
+.item .illustration::after {
+	border-radius: 0 50% 50% 0;
+	right: unset;
+	left: 0;
+	max-height: 350px;
+	height: 100%;
+	width: 70%;
+}
+.item .illustration img {
+	max-width: calc(100% - 8em);
+	margin-left: 8em;
+}
+.item .info {
+	width: 40%;
+	margin-left: 3em;
+	place-self: center;
+	margin-bottom: 2em;
+	animation: fade both 0.5s;
+	animation-delay: 0.5s;
+}
+.item .info p {
+	max-width: 85%;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
