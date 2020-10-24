@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+:root {
+	--soft-blue: hsl(231, 69%, 60%);
+	--soft-red: hsl(0, 94%, 66%);
+	--grayish-blue: hsl(229, 8%, 60%);
+	--very-dark-blue: hsl(229, 31%, 21%);
+}
+body {
+	margin: 0 auto;
+}
+header {
+	padding: 0 4em;
+}
+nav {
+	display: flex;
+}
+.logo {
+	place-self: center;
+	cursor: pointer;
+}
+.navbar {
+	margin-left: auto;
+	font-family: "Rubik", sans-serif;
+	text-transform: uppercase;
+}
+.navbar ul {
+	list-style: none;
+}
+.navbar li {
+	display: inline-block;
+	margin: 0 1em;
+}
+.navbar li:first-child {
+	margin-left: 0;
+}
+.navbar li:last-child {
+	margin-right: 0;
+}
+.navbar li a {
+	text-decoration: none;
+	color: var(--very-dark-blue);
+	transition: color 0.2s linear;
+}
+.navbar li a:hover {
+	color: var(--soft-red);
+}
+.nav-login {
+	font: inherit;
+	background: var(--soft-red);
+	border: 1px solid transparent;
+	padding: 0.8em 2em;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	margin-left: 1em;
+	transition: all 0.2s linear;
+}
+.nav-login:hover {
+	background: #ffffff;
+	border: 1px solid var(--soft-red);
+	color: var(--soft-red);
+}
