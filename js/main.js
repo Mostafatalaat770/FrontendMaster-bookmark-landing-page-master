@@ -11,3 +11,11 @@ const setCurrentTab = (tabNumber) => {
 	items[tabNumber - 1].classList.add("active");
 	tabs[tabNumber - 1].classList.add("active");
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+	const emailField = document.getElementById("email");
+
+	emailField.addEventListener("invalid", (e) => {
+		e.preventDefault();
+	});
+});
