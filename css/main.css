@@ -379,3 +379,36 @@ hr {
 	color: var(--soft-red);
 	border-color: var(--soft-red);
 }
+footer {
+	background: var(--very-dark-blue);
+	padding: 1em 0;
+}
+.footer-nav {
+	display: flex;
+	padding: 0 6em;
+}
+footer .navbar {
+	margin-left: 3em;
+}
+footer .navbar .social {
+	margin-left: auto;
+}
+footer .social {
+	display: flex;
+	margin-left: auto;
+	place-items: center;
+}
+footer .social .item {
+	margin-left: 1em;
+	cursor: pointer;
+}
+footer .social .item:first-child {
+	margin-right: 1em;
+}
+footer .social .item:hover {
+	filter: invert(50%) sepia(99%) saturate(1802%) hue-rotate(323deg)
+		brightness(94%) contrast(109%);
+}
+footer .navbar li a {
+	color: #ffffff;
+}
