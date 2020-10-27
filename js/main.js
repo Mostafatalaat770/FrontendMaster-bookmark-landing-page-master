@@ -14,8 +14,21 @@ const setCurrentTab = (tabNumber) => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	const emailField = document.getElementById("email");
-
 	emailField.addEventListener("invalid", (e) => {
 		e.preventDefault();
+	});
+
+	document.querySelectorAll(".collapse-icon").forEach((navCollapseButton) => {
+		navCollapseButton.addEventListener("click", () => {
+			const desktopHeader = document.getElementById("desktop-header");
+			const mobileHeader = document.getElementById("mobile-header");
+			if (navCollapseButton.classList.contains("active")) {
+				mobileHeader.classList.remove("show");
+				desktopHeader.classList.remove("hide");
+			} else {
+				mobileHeader.classList.add("show");
+				desktopHeader.classList.add("hide");
+			}
+		});
 	});
 });
