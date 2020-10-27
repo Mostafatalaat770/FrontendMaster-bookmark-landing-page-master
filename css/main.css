@@ -382,7 +382,7 @@ hr {
 	color: var(--very-dark-blue);
 	outline: none;
 }
-#contact input:invalid + span::before {
+#contact .invalid::before {
 	content: "whoops, make sure it's an email";
 	position: absolute;
 	color: #ffffff;
@@ -397,13 +397,13 @@ hr {
 	border: 3px solid var(--soft-red);
 	border-radius: 0 0 5px 5px;
 }
-#contact input:invalid + span::after {
+#contact .invalid::after {
 	content: url(../images/icon-error.svg);
 	position: absolute;
 	right: 1em;
 	bottom: 0.5em;
 }
-#contact input:invalid {
+#contact .invalid-field {
 	border-color: var(--soft-red);
 	border-radius: 5px 5px 0 0;
 }
@@ -453,8 +453,6 @@ footer .navbar li a {
 	display: block !important;
 }
 @media (max-width: 1000px) {
-	body {
-	}
 	#desktop-header {
 		margin-bottom: 4em;
 	}
@@ -475,6 +473,26 @@ footer .navbar li a {
 		z-index: 10;
 		padding: 0;
 		margin-top: -4em;
+		animation: collapse-nav 0.8s both;
+	}
+	.collapse-animate {
+		animation: collapse-reverse 0.8s both;
+	}
+	@keyframes collapse-nav {
+		0% {
+			bottom: 100%;
+		}
+		100% {
+			bottom: 0;
+		}
+	}
+	@keyframes collapse-reverse {
+		0% {
+			bottom: 0;
+		}
+		100% {
+			bottom: 100%;
+		}
 	}
 	#desktop-header .navbar {
 		display: none;
@@ -542,6 +560,16 @@ footer .navbar li a {
 		background: inherit;
 		box-shadow: none;
 		border-color: #ffffff;
+	}
+	#mobile-header .social {
+		display: flex;
+		place-self: center;
+		margin-top: auto;
+		margin-bottom: 2em;
+	}
+	#mobile-header .social .item {
+		margin: 0 1em;
+		place-self: center;
 	}
 	#front {
 		flex-direction: column-reverse;
